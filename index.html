@@ -5,18 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tatiana Samokhvalova: Personal site and portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            max-width: 100ch;
+            margin-inline: auto;
+            padding: 2%;
+        }
+        nav {
+            display: flex;
+            margin-bottom: 2em;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: oklch(80% 3% 200);
+        }
+        nav a {
+            flex: 1;
+            text-decoration: none;
+            color: inherit;
+            text-align: center;
+            padding: 0.5em;
+        }
+        nav a.current {
+            border-bottom-width: 4px;
+            border-bottom-color: oklch(80% 3% 200);
+            font-weight: bold;
+            padding-bottom: 1px;
+            border-bottom-style: solid;
+        }
+    </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
+        <a class="current" href="index.html">Home</a>
         <a href="contact/index.html">Contact</a>
         <a href="projects/index.html">Projects</a>
         <a href="https://github.com/Tanya301", target="_blank">GitHub</a>
         <a href="resume/index.html">Resume</a>
     </nav>
     <h1>Tatiana Samokhvalova</h1>
-    <p>I am a third year Data Science student at UC, San Diego. I enjoy coding and solving math problems. In my free time, I like to do archery and draw.</p>
-    <p>Fun fact: I speak 3 languages: Russian, English, and French.</p>
+    <p>I am a third year Data Science student at UC, San Diego. I enjoy coding and solving math problems. In my free time, I like to do archery and draw. Fun fact: I speak 3 languages: Russian, English, and French.</p>
     <p>This is a picture of my hard-working car. Her name is Kitty.</p>
     <img src="images/Screenshot 2025-01-10 at 11.22.05 AM.png", alt="A hard-working car", width="600px">
     
