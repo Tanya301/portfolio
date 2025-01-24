@@ -1,11 +1,14 @@
 :root {
     --color-accent: oklch(53.73% 0.1989 139.24);
 }
+select,
 body {
     /* Set line height to 1.5 times the font size
          and use the OS’s UI font as the website font
        */
     font: 100%/1.5 system-ui;
+}
+body {
     max-width: 100ch;
     margin-inline: auto;
     padding: 2%;
@@ -15,7 +18,9 @@ nav {
     margin-bottom: 2em;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: oklch(80% 3% 200);
+    /* border-bottom-color: oklch(80% 3% 200); */
+    --border-color: oklch(50% 10% 200 / 40%);
+    border-bottom-color: var(--border-color);
 }
 nav a {
     flex: 1;
@@ -26,7 +31,7 @@ nav a {
 }
 nav a.current {
     border-bottom-width: 4px;
-    border-bottom-color: oklch(80% 3% 200);
+    border-bottom-color: var(--border-color);
     font-weight: bold;
     padding-bottom: 1px;
     border-bottom-style: solid;
@@ -37,7 +42,10 @@ a:hover {
     font-weight: bold;
     padding-bottom: 1px;
     border-bottom-style: solid;
-    background-color: oklch(from var(--color-accent) 95% 5% h)
+    background-color: oklch(from var(--color-accent) 95% 5% h);
+    /* color-mix worked weird with my accent color (green), so i chose to define the colors separately */
+    /* background-color: color-mix(in oklch, var(--color-accent) 70%, black 30%); */
+    background-color: light-dark(oklch(from var(--color-accent) 95% 5% h), oklch(from var(--color-accent)  20% 80% h));
 }
 
 form {
@@ -45,7 +53,7 @@ form {
     grid-template-columns: auto 1fr;
     gap: 1em;
 }
-label {
+form label {
     display: grid;
     grid-template-columns: subgrid;
     grid-column: 1 / -1;
@@ -57,7 +65,7 @@ button:hover {
     border-style: solid;
     border-width: 2px;
     border-color: var(--color-accent);
-    background-color: oklch(from var(--color-accent) 95% 5% h);
+    background-color: light-dark(oklch(from var(--color-accent) 95% 5% h), oklch(from var(--color-accent)  20% 80% h));
 }
 
 div.projects {
@@ -90,12 +98,12 @@ section {
 }
 section article {
     display: grid;
-    background-color: #f9f9f9;
+    background-color: light-dark(#f9f9f9, #171717);
     padding: 1rem;
 }
 section article:hover {
     border-color: var(--color-accent);
-    background-color: oklch(from var(--color-accent) 95% 5% h);
+    background-color: light-dark(oklch(from var(--color-accent) 95% 5% h), oklch(from var(--color-accent) 5% 95% h));
     margin: 1px;
 }
 section h2 {
@@ -105,3 +113,26 @@ section header {
     grid-column: span 2;
     margin-bottom: 0em;
 }
+
+label.color-scheme {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 80%;
+}
+
+/* @media (prefers-color-scheme: dark) {
+    a:hover,
+    button:hover,
+    section article:hover {
+        background-color: oklch(from var(--color-accent) 15% 85% h);
+    }
+}
+@media (prefers-color-scheme: light) {
+    a:hover,
+    button:hover,
+    section article:hover {
+        background-color: oklch(from var(--color-accent) 95% 5% h);
+    }
+}
+   */
