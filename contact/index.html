@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="../style.css">
-    <script type="module" src="../global.js"></script>
-</head>
-<body>
-    <h1>Contact</h1>
-    <form action="mailto:tsamokhvalova@ucsd.edu" method="POST" enctype="text/plain">
-        <label>Your email: <input name="email" type="email"></label>
-        <label>Subject <input name="subject" value="Simple greeting"></label>
-        <label>Body <textarea name="body">Hi!</textarea></label>
-        <button type="submit">Send 📨</button>
-    </form>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link rel="stylesheet" href="../style.css">
+        <script type="module" src="../global.js"></script>
+    </head>
+    <body>
+        <h1>Contact</h1>
+        <form action="mailto:tsamokhvalova@ucsd.edu" method="GET" id="contact-form">
+            <label>Subject <input name="subject" value="Simple greeting"></label>
+            <label>Body <textarea name="body">Hi!</textarea></label>
+            <button type="submit">Send 📨</button>
+        </form>
+    </body>
 </html>

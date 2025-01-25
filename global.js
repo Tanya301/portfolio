@@ -4,15 +4,7 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
-// let navLinks = $$("nav a");
-
-// let currentLink = navLinks.find(
-//   (a) => a.host === location.host && a.pathname === location.pathname
-// );
-
-// // Optional operator ?. to prevent errors
-// currentLink?.classList.add('current');
-
+// - - - Navigation - - - //
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
 
 let pages = [
@@ -45,6 +37,7 @@ for (let p of pages) {
   nav.append(a);
 }
 
+// - - - Dark/Light theme - - - //
 document.body.insertAdjacentHTML(
   'afterbegin',
   `
@@ -73,3 +66,19 @@ select.addEventListener('input', function (event) {
 function setColorScheme(colorScheme) {
   document.documentElement.style.setProperty('color-scheme', colorScheme);
 }
+
+// - - - Contact form - - - //
+const form = document.getElementById('contact-form');
+
+form?.addEventListener('submit', function (event) {
+  event.preventDefault();
+  const data = new FormData(form);
+  let url = form.action + "?";
+  for (let [name, value] of data) {
+    if (url.slice(-1) !== "?") {
+      url += "&";
+    }
+    url += encodeURIComponent(name) + "=" + encodeURIComponent(value);
+  }
+  location.href = url;
+});
