@@ -18,7 +18,6 @@ nav {
     margin-bottom: 2em;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    /* border-bottom-color: oklch(80% 3% 200); */
     --border-color: oklch(50% 10% 200 / 40%);
     border-bottom-color: var(--border-color);
 }
@@ -92,7 +91,9 @@ h1, h2, h3, h4, h5, h6 {
 
 section {
     display: grid;
-    grid-template-columns: auto;
+    /* grid-template-columns: auto; */
+    grid-template-columns: repeat(auto-fill, minmax(30em, 2fr));
+    /* grid-template-columns: subgrid; */
     gap: 1rem;
     padding: 1rem;
 }
@@ -101,9 +102,9 @@ section article {
     background-color: light-dark(#f9f9f9, #171717);
     padding: 1rem;
 }
-section article:hover {
+article:hover {
     border-color: var(--color-accent);
-    background-color: light-dark(oklch(from var(--color-accent) 95% 5% h), oklch(from var(--color-accent) 5% 95% h));
+    background-color: light-dark(oklch(from var(--color-accent) 95% 5% h), oklch(from var(--color-accent) 20% 80% h));
     margin: 1px;
 }
 section h2 {
@@ -120,19 +121,3 @@ label.color-scheme {
     right: 1em;
     font-size: 80%;
 }
-
-/* @media (prefers-color-scheme: dark) {
-    a:hover,
-    button:hover,
-    section article:hover {
-        background-color: oklch(from var(--color-accent) 15% 85% h);
-    }
-}
-@media (prefers-color-scheme: light) {
-    a:hover,
-    button:hover,
-    section article:hover {
-        background-color: oklch(from var(--color-accent) 95% 5% h);
-    }
-}
-   */

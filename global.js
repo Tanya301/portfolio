@@ -61,15 +61,15 @@ const select = document.querySelector('.color-scheme select');
 
 if ("colorScheme" in localStorage) {
   select.value = localStorage.colorScheme;
-  setColor(localStorage.colorScheme)
+  setColorScheme(localStorage.colorScheme)
 }
 
 select.addEventListener('input', function (event) {
   console.log('color scheme changed to', event.target.value);
   localStorage.colorScheme = event.target.value
-  setColor(localStorage.colorScheme)
+  setColorScheme(localStorage.colorScheme)
 });
 
-function setColor(colorScheme) {
+function setColorScheme(colorScheme) {
   document.documentElement.style.setProperty('color-scheme', colorScheme);
 }
