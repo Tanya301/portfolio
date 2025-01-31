@@ -82,3 +82,56 @@ form?.addEventListener('submit', function (event) {
   }
   location.href = url;
 });
+
+// - - - Projects - - - //
+export async function fetchJSON(url) {
+  try {
+      // Fetch the JSON file from the given URL
+      const response = await fetch(url);
+
+      if (!response.ok) {
+        throw new Error(`Failed to fetch projects: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      return data
+
+  } catch (error) {
+      console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+export function renderProjects(projects, containerElement, headingLevel = 'h1') {
+  // Your code will go here
+  containerElement.innerHTML = '';
+  for (let project of projects) {
+    // const article = document.createElement('article');
+    // article.innerHTML = `
+    //     <h3>${project.title}</h3>
+    //     <img src="${project.image}" alt="${project.title}">
+    //     <p>${project.description}</p>
+    // `;
+    // containerElement.appendChild(article);
+
+    const article = document.createElement('article');
+    
+    const heading = document.createElement(headingLevel);
+    heading.textContent = project.title;
+
+    const img = document.createElement('img');
+    img.src = project.image;
+    img.alt = project.title;
+
+    const paragraph = document.createElement('p');
+    paragraph.textContent = project.description;
+
+    article.appendChild(heading);
+    article.appendChild(img);
+    article.appendChild(paragraph);
+
+    containerElement.appendChild(article);
+  }
+}
+
+// let data = await fetchJSON('../lib/projects.json')
+// console.log(data)
