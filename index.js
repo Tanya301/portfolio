@@ -8,11 +8,11 @@ const projectsContainer = document.querySelector('.projects');
 renderProjects(latestProjects, projectsContainer, 'h2');
 
 const githubData = await fetchGitHubData('Tanya301');
+console.log(githubData)
 
 const profileStats = document.querySelector('#profile-stats');
 
 if (profileStats) {
-    console.log(profileStats)
     profileStats.innerHTML = `
           <dl>
             <dt>Public Repos:</dt><dd>${githubData.public_repos}</dd>
