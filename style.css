@@ -87,6 +87,7 @@ h1 {
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
     text-wrap: balance;
+    margin-top: 40px;
 }
 
 section {
@@ -120,4 +121,29 @@ label.color-scheme {
     top: 1em;
     right: 1em;
     font-size: 80%;
+}
+
+dl {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* gap: 10px; */
+    text-align: center;
+    /* max-width: 800px;
+    margin: 20px auto; */
+}
+
+dt {
+    grid-row: 1;  /* Force all <dt> elements to the first row */
+    font-size: 14px;
+    font-weight: bold;
+    color: #777;
+    text-transform: uppercase;
+}
+
+dd {
+    grid-row: 2;  /* Force all <dd> elements to the second row */
+    font-size: 32px;
+    /* font-weight: bold; */
+    /* color: #000; */
+    margin: 0;
 }
