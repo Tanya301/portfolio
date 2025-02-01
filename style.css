@@ -133,7 +133,7 @@ dl {
 }
 
 dt {
-    grid-row: 1;  /* Force all <dt> elements to the first row */
+    grid-row: 1;
     font-size: 14px;
     font-weight: bold;
     color: #777;
@@ -141,9 +141,7 @@ dt {
 }
 
 dd {
-    grid-row: 2;  /* Force all <dd> elements to the second row */
+    grid-row: 2;
     font-size: 32px;
-    /* font-weight: bold; */
-    /* color: #000; */
     margin: 0;
 }

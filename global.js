@@ -110,6 +110,9 @@ export function renderProjects(projects, containerElement, headingLevel = 'h1') 
     const heading = document.createElement(headingLevel);
     heading.textContent = project.title;
 
+    const year = document.createElement('dt')
+    year.textContent = project.year
+
     const img = document.createElement('img');
     img.src = project.image;
     img.alt = project.title;
@@ -118,6 +121,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h1') 
     paragraph.textContent = project.description;
 
     article.appendChild(heading);
+    article.appendChild(year)
     article.appendChild(img);
     article.appendChild(paragraph);
 
