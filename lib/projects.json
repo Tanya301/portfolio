@@ -1,62 +1,80 @@
 [
     {
-        "title": "Lorem ipsum dolor sit. hi",
+        "title": "Recipes Research Project (DSC 80)",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatem repudiandae dolor aut reprehenderit optio nemo magni fugiat quibusdam, a explicabo assumenda. Dolore et animi iusto odit quidem amet labore?"
+        "url": "https://github.com/Tanya301/recipes",
+        "description": "Explored how recipe features, like nutrition and reviews, relate to preparation time."
     },
     {
-        "title": "Saepe similique sit atque.",
+        "title": "Podcast Subtitle Enhancer",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Veritatis nam necessitatibus, est repellat in dolore, odit voluptatem quidem, eveniet et sequi. Odit, sit exercitationem dolore nisi nobis obcaecati quos libero corporis sint dolor quo tenetur possimus consequatur neque?"
+        "url": "https://github.com/Tanya301/podcast-subtitle-enhancer",
+        "description": "Wrote code for generating and enhancing subtitles for the PostgresFM podcast, using Deepgram for transcription and ChatGPT for typo and technical term correction."
     },
     {
-        "title": "Unde officia exercitationem repellendus?",
+        "title": "Portfolio (DSC 106)",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Possimus quam facere tempora, sit ad quia. Officia quo, dolores libero vero ea iusto maiores tempora, odio illum provident porro fuga reprehenderit est distinctio corrupti eaque ipsa enim soluta voluptatibus."
+        "url": "https://github.com/Tanya301/portfolio",
+        "description": "A portfolio website built with HTML, CSS, and JS, showcasing projects, skills, and contact information."
     },
     {
-        "title": "Similique incidunt vitae corporis?",
+        "title": "Cat Website",
+        "year": "2021",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Excepturi, maxime corrupti culpa reiciendis mollitia corporis eveniet ex architecto enim, nostrum consequuntur numquam quo dolorem dolores praesentium repellat ipsum tempore ullam expedita? Vero molestias tempore quasi ratione consectetur atque?"
+        "url": "https://github.com/Tanya301/cat",
+        "description": "This project addresses a major modern issue —- lack of cats, which are extremely beneficial for reducing stress with their presence."
     },
     {
-        "title": "Animi rem repellendus et.",
+        "title": "Postgres.AI Slack Chatbot",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Libero deserunt ad dolores, perferendis quo cumque soluta velit debitis facere, porro obcaecati autem. Ab consequatur, a, earum nesciunt nulla assumenda ad nostrum, excepturi veritatis provident quae dolores facere voluptatum!"
+        "url": "https://postgres.ai/",
+        "description": "LLM-based Slack chatbot built on top of OpenAI GPT-4 API with RAG, capable of running benchmarks, testing SQL, and more."
     },
     {
-        "title": "Impedit quibusdam eius qui.",
+        "title": "Predicting Restaurant Ratings with Machine Learning | Final project (CSE 158)",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Non odio, doloribus cum ipsam dolor facilis consectetur, adipisci delectus eaque, vero impedit repellat fugiat sapiente. Veniam accusantium maxime nam a id molestias omnis doloribus reprehenderit, excepturi animi ad delectus."
+        "description": "Worked in a team to analyze Google restaurant reviews to predict ratings using machine learning. We performed exploratory data analysis, feature engineering, and compared models like sentiment analysis and user-item interactions, evaluating their performance with different metrics."
     },
     {
-        "title": "Delectus fugiat sint voluptatibus.",
+        "title": "Choosing Your Vacation Spot (DSC 106)",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Ad sunt dolore nisi non saepe a veritatis ducimus adipisci corrupti repudiandae, quidem in praesentium nam qui ea fugit corporis alias, voluptas doloremque! Iure eveniet illum nobis nostrum sed totam?"
+        "description": "This is a vizualisation project, in which I compared the weather patterns of six U.S. cities using heatmaps of sunshine and rainfall, helping to determine the best vacation spots based on seasonal weather trends."
     },
     {
-        "title": "Fugit iste odit laborum!",
+        "title": "The Data Science Experience: Trends, Demographics, and Predictions (DSC 190)",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Aperiam provident neque ducimus culpa, distinctio ab sunt dolores qui eligendi, modi, at aliquid alias expedita dolorum eveniet delectus sed pariatur blanditiis. Nemo sed dolore quasi, odit nihil rerum cum?"
+        "description": "This project, I worked with a pertner to analyze the Kaggle Data Science Survey to explore tool usage, demographics, and predict salary and age."
     },
     {
-        "title": "Necessitatibus porro labore explicabo.",
+        "title": "Deceptive Visualizations (DSC 106)",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Ratione quibusdam consequuntur, voluptates nam architecto numquam, earum officia impedit facere at placeat id ducimus ipsum, suscipit eveniet doloribus ut? Sit maiores corrupti nemo neque? Tempore veniam commodi impedit veritatis."
+        "description": "This is a visualization project, in which I created two visualizations, earnest and deceptive, to highlight tactics used in deceptive visuals and demonstrate the potential dangers."
     },
     {
-        "title": "Praesentium facere totam ad?",
+        "title": "Postgres.AI Consultant",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Obcaecati unde magni ipsam esse nisi, voluptatem in consequatur animi optio facilis neque itaque dicta tempore recusandae cum! Tenetur quis facere distinctio necessitatibus id in incidunt dolorum nostrum libero beatae."
+        "url": "https://postgres.ai/",
+        "description": "LLM-based assistant with RAG, capable of running benchmarks, testing SQL, and more, developed for Postgres.AI. This improved version transitioned from Slack to WebUI, supporting additional OpenAI models like GPT-4o-mini, fine-tuned GPT-4o-mini, and Gemini 1.5 Pro."
     },
     {
-        "title": "Dolorem nostrum eligendi magnam.",
+        "title": "Highschool Hackathon JuniorHack",
+        "year": "2020",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Quam ipsum expedita molestias explicabo voluptas veniam ducimus obcaecati recusandae? Quidem molestias ipsum, incidunt ea vero excepturi architecto veritatis voluptate ex! Doloremque ea distinctio expedita id. Eligendi voluptatibus autem dolor?"
+        "description": "Co-developed a Python desktop app designed to help users learn English, created as part of the JuniorHack high school hackathon. The app features interactive lessons and exercises to enhance language skills."
     },
     {
-        "title": "Odio debitis quisquam incidunt.",
+        "title": "Highschool Hackathon JuniorHack",
+        "year": "2019",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Et officiis esse error ducimus ab cupiditate, velit harum dolor corporis accusantium consectetur optio earum hic fugiat sequi tempora placeat! Dolorum magnam nihil perspiciatis mollitia, blanditiis necessitatibus maiores sint in."
+        "description": "Co-developed a food sharing website using HTML, created during the 2019 JuniorHack high school hackathon. The website facilitates community-driven food sharing, promoting sustainability and reducing waste."
     }
 ]
