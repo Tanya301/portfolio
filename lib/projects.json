@@ -1,79 +1,79 @@
 [
     {
         "title": "Recipes Research Project (DSC 80)",
-        "year": "2024",
+        "year": 2024,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "url": "https://github.com/Tanya301/recipes",
         "description": "Explored how recipe features, like nutrition and reviews, relate to preparation time."
     },
     {
         "title": "Podcast Subtitle Enhancer",
-        "year": "2023",
+        "year": 2023,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "url": "https://github.com/Tanya301/podcast-subtitle-enhancer",
         "description": "Wrote code for generating and enhancing subtitles for the PostgresFM podcast, using Deepgram for transcription and ChatGPT for typo and technical term correction."
     },
     {
         "title": "Portfolio (DSC 106)",
-        "year": "2025",
+        "year": 2025,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "url": "https://github.com/Tanya301/portfolio",
         "description": "A portfolio website built with HTML, CSS, and JS, showcasing projects, skills, and contact information."
     },
     {
         "title": "Cat Website",
-        "year": "2021",
+        "year": 2021,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "url": "https://github.com/Tanya301/cat",
         "description": "This project addresses a major modern issue —- lack of cats, which are extremely beneficial for reducing stress with their presence."
     },
     {
         "title": "Postgres.AI Slack Chatbot",
-        "year": "2023",
+        "year": 2023,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "url": "https://postgres.ai/",
         "description": "LLM-based Slack chatbot built on top of OpenAI GPT-4 API with RAG, capable of running benchmarks, testing SQL, and more."
     },
     {
         "title": "Predicting Restaurant Ratings with Machine Learning | Final project (CSE 158)",
-        "year": "2024",
+        "year": 2024,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Worked in a team to analyze Google restaurant reviews to predict ratings using machine learning. We performed exploratory data analysis, feature engineering, and compared models like sentiment analysis and user-item interactions, evaluating their performance with different metrics."
     },
     {
         "title": "Choosing Your Vacation Spot (DSC 106)",
-        "year": "2025",
+        "year": 2025,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "This is a vizualisation project, in which I compared the weather patterns of six U.S. cities using heatmaps of sunshine and rainfall, helping to determine the best vacation spots based on seasonal weather trends."
     },
     {
         "title": "The Data Science Experience: Trends, Demographics, and Predictions (DSC 190)",
-        "year": "2024",
+        "year": 2024,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "This project, I worked with a pertner to analyze the Kaggle Data Science Survey to explore tool usage, demographics, and predict salary and age."
+        "description": "This project, I worked with a partner to analyze the Kaggle Data Science Survey to explore tool usage, demographics, and predict salary and age."
     },
     {
         "title": "Deceptive Visualizations (DSC 106)",
-        "year": "2025",
+        "year": 2025,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "This is a visualization project, in which I created two visualizations, earnest and deceptive, to highlight tactics used in deceptive visuals and demonstrate the potential dangers."
     },
     {
         "title": "Postgres.AI Consultant",
-        "year": "2024",
+        "year": 2024,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "url": "https://postgres.ai/",
         "description": "LLM-based assistant with RAG, capable of running benchmarks, testing SQL, and more, developed for Postgres.AI. This improved version transitioned from Slack to WebUI, supporting additional OpenAI models like GPT-4o-mini, fine-tuned GPT-4o-mini, and Gemini 1.5 Pro."
     },
     {
         "title": "Highschool Hackathon JuniorHack",
-        "year": "2020",
+        "year": 2020,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Co-developed a Python desktop app designed to help users learn English, created as part of the JuniorHack high school hackathon. The app features interactive lessons and exercises to enhance language skills."
     },
     {
         "title": "Highschool Hackathon JuniorHack",
-        "year": "2019",
+        "year": 2019,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Co-developed a food sharing website using HTML, created during the 2019 JuniorHack high school hackathon. The website facilitates community-driven food sharing, promoting sustainability and reducing waste."
     }

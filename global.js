@@ -102,6 +102,7 @@ export async function fetchJSON(url) {
 }
 
 export function renderProjects(projects, containerElement, headingLevel = 'h1') {
+  projects.sort((a, b) => b.year - a.year);
   containerElement.innerHTML = '';
   for (let project of projects) {
     const article = document.createElement('article');
