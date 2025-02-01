@@ -25,7 +25,7 @@
         "year": 2021,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "url": "https://github.com/Tanya301/cat",
-        "description": "This project addresses a major modern issue —- lack of cats, which are extremely beneficial for reducing stress with their presence."
+        "description": "This project addresses a major modern issue — lack of cats, which are extremely beneficial for reducing stress with their presence."
     },
     {
         "title": "Postgres.AI Slack Chatbot",
@@ -44,7 +44,7 @@
         "title": "Choosing Your Vacation Spot (DSC 106)",
         "year": 2025,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "This is a vizualisation project, in which I compared the weather patterns of six U.S. cities using heatmaps of sunshine and rainfall, helping to determine the best vacation spots based on seasonal weather trends."
+        "description": "This is a visualization project, in which I compared the weather patterns of six U.S. cities using heatmaps of sunshine and rainfall, helping to determine the best vacation spots based on seasonal weather trends."
     },
     {
         "title": "The Data Science Experience: Trends, Demographics, and Predictions (DSC 190)",
