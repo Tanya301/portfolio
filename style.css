@@ -143,8 +143,8 @@ dd {
 #projects-pie-plot {
     max-width: 20em;
     margin-block: 2em;
-  
     overflow: visible;
+    margin: 1em;
 }
 
 span.swatch {
@@ -158,9 +158,9 @@ span.swatch {
 ul.legend {
     list-style: none;
     display: grid;
-    align-items: center;
+    flex: 1;
     grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
-    gap: 1em;
+    gap: 5px;
     padding: 1em;
     margin: 1em;
     border-style: solid;
@@ -170,4 +170,9 @@ ul.legend {
 
 ul em {
     color: #7f7f7f;
+}
+
+div.container {
+    display: flex;
+    align-items: center;
 }
