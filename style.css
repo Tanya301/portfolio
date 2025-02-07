@@ -45,6 +45,7 @@ a:hover {
     /* color-mix worked weird with my accent color (green), so i chose to define the colors separately */
     /* background-color: color-mix(in oklch, var(--color-accent) 70%, black 30%); */
     background-color: light-dark(oklch(from var(--color-accent) 95% 5% h), oklch(from var(--color-accent)  20% 80% h));
+    transition: 300ms;
 }
 
 form {
@@ -65,6 +66,7 @@ button:hover {
     border-width: 2px;
     border-color: var(--color-accent);
     background-color: light-dark(oklch(from var(--color-accent) 95% 5% h), oklch(from var(--color-accent)  20% 80% h));
+    transition: 300ms;
 }
 
 div.projects {
@@ -105,6 +107,7 @@ article:hover {
     border-color: var(--color-accent);
     background-color: light-dark(oklch(from var(--color-accent) 95% 5% h), oklch(from var(--color-accent) 20% 80% h));
     margin: 1px;
+    transition: 300ms;
 }
 section h2 {
     color: var(--color-accent);
@@ -163,16 +166,61 @@ ul.legend {
     gap: 5px;
     padding: 1em;
     margin: 1em;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #7f7f7f;
+    border: 2px solid #ccc;
 }
 
 ul em {
-    color: #7f7f7f;
+    color: #ccc;
 }
 
 div.container {
     display: flex;
     align-items: center;
 }
+
+/* div.search-container {
+    display: flex;
+    justify-content: center; /* Centers the input horizontally 
+} */
+
+input.searchBar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    outline: none;
+}
+
+input.searchBar:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 5px var(--color-accent);
+    transition: 300ms;
+}
+
+&:has(path:hover) {
+    path:not(:hover) {
+        opacity: 0.5;
+    }
+}
+
+path {
+    transition: 300ms;
+}
+
+.selected {
+    --color: var(--color-accent) !important;
+  
+    &:is(path) {
+        fill: var(--color);
+    }
+}
+/* .selected {
+    fill: var(--color-accent) !important;
+} */
+
+path {
+    cursor: pointer;
+}
+
