@@ -92,7 +92,7 @@ function renderPieChart(projectsGiven) {
         query = event.target.value;
         let filteredProjects = projects.filter((project) => {
             let values = Object.values(project).join('\n').toLowerCase();
-                return values.includes(query.toLowerCase());
+            return values.includes(query.toLowerCase());
         });
 
         if (selectedIndex !== -1) {
