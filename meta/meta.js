@@ -95,3 +95,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadData();
 });
 
+
+const width = 1000;
+const height = 600;
+
+const svg = d3
+    .select('#chart')
+    .append('svg')
+    .attr('viewBox', `0 0 ${width} ${height}`)
+    .style('overflow', 'visible');

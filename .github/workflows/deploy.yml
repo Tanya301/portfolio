@@ -1,24 +1,34 @@
-- name: Checkout
-  uses: actions/checkout@v4
-  with:
-    fetch-depth: '0'
+name: Code Statistics  # Give your workflow a name
 
-- name: Run Elocuent
-  run: |
-    npx elocuent -d . -o meta/loc.csv
+on:  # Define when this workflow should run
+  push:
+    branches: [ main ]  # Or whatever branch you want
+  # You can add other triggers as needed
 
-- name: Commit and Push
-  run: |
-    git config --local user.email "action@github.com"
-    git config --local user.name "GitHub Action"
-    mkdir -p meta
-    git pull
-    git add -f meta/loc.csv
-    git commit -m "Update code statistics" || echo "No changes to commit"
-    git push
+jobs:
+  update-stats:  # Define a job
+    runs-on: ubuntu-latest  # Specify the runner
+    permissions:  # Move permissions here
+      contents: write
+      pages: write
+      id-token: write
+    
+    steps:  # Your existing steps go here
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: '0'
 
-- name: GITHUB_TOKEN
-  permissions:
-    contents: write
-    pages: write
-    id-token: write
+      - name: Run Elocuent
+        run: |
+          npx elocuent -d . -o meta/loc.csv
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          mkdir -p meta
+          git pull
+          git add -f meta/loc.csv
+          git commit -m "Update code statistics" || echo "No changes to commit"
+          git push
