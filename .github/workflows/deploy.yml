@@ -1,19 +1,18 @@
-name: Code Statistics  # Give your workflow a name
+name: Code Statistics 
 
-on:  # Define when this workflow should run
+on:
   push:
-    branches: [ main ]  # Or whatever branch you want
-  # You can add other triggers as needed
+    branches: [ main ]
 
 jobs:
-  update-stats:  # Define a job
-    runs-on: ubuntu-latest  # Specify the runner
-    permissions:  # Move permissions here
+  update-stats: 
+    runs-on: ubuntu-latest 
+    permissions:
       contents: write
       pages: write
       id-token: write
     
-    steps:  # Your existing steps go here
+    steps: 
       - name: Checkout
         uses: actions/checkout@v4
         with:
