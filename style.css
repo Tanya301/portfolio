@@ -224,3 +224,20 @@ path {
     cursor: pointer;
 }
 
+.gridlines line {
+    stroke: oklch(50% 10% 200 / 40%);
+}
+
+.gridlines path {
+    stroke: oklch(50% 10% 200 / 40%);
+}
+
+circle {
+    transition: 200ms;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+circle:hover {
+transform: scale(1.5);
+}
