@@ -142,30 +142,30 @@ function createScatterplot() {
     // Create gridlines as an axis with no labels and full-width ticks
     gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
 
-    // Create the axes
+    // Create and add the axes
     const xAxis = d3.axisBottom(xScale);
     const yAxis = d3
         .axisLeft(yScale)
         .tickFormat((d) => String(d % 24).padStart(2, '0') + ':00');
-
-    // Add X axis
     svg
         .append('g')
         .attr('transform', `translate(0, ${usableArea.bottom})`)
         .call(xAxis);
-
-    // Add Y axis
     svg
         .append('g')
         .attr('transform', `translate(${usableArea.left}, 0)`)
         .call(yAxis);
 
     dots
+        .selectAll('circle')
         .on('mouseenter', (event, commit) => {
-          updateTooltipContent(commit);
+            updateTooltipContent(commit);
+            updateTooltipVisibility(true);
         })
         .on('mouseleave', () => {
-          updateTooltipContent({}); // Clear tooltip content
+            console.log('Left')
+            updateTooltipContent({});
+            updateTooltipVisibility(false);
         });
 }
 
@@ -180,7 +180,18 @@ function updateTooltipContent(commit) {
     date.textContent = commit.datetime?.toLocaleString('en', {
         dateStyle: 'full',
     });
-  }
+}
+
+function updateTooltipVisibility(isVisible) {
+    const tooltip = document.getElementById('commit-tooltip');
+    tooltip.hidden = !isVisible;
+}
+
+function updateTooltipPosition(event) {
+    const tooltip = document.getElementById('commit-tooltip');
+    tooltip.style.left = `${event.clientX}px`;
+    tooltip.style.top = `${event.clientY}px`;
+}
 
 document.addEventListener('DOMContentLoaded', async () => {
     await loadData();

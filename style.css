@@ -241,3 +241,21 @@ circle {
 circle:hover {
 transform: scale(1.5);
 }
+
+#commit-tooltip {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    /* backdrop-filter: blur(8px) brightness(120%); */
+}
+
+dl.info {
+    all: revert;
+    /* ... other styles ... */
+    transition-duration: 500ms;
+    transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+    opacity: 0;
+    visibility: hidden;
+}
