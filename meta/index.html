@@ -16,6 +16,8 @@
     <div id="stats"></div>
     <h2 style="color: var(--color-accent)">Commits by Time of Day</h2>
     <div id="chart"></div>
+    <p id="selection-count">No commits selected</p>
+    <dl id="language-breakdown" class="stats"></dl>
     <dl id="commit-tooltip" class="info tooltip">
         <dt>Commit</dt>
         <dd>
@@ -24,6 +26,9 @@
       
         <dt>Date</dt>
         <dd id="commit-date"></dd>
+
+        <dt>Lines Changed</dt>
+        <dd id="commit-lines"></dd>
       
         <!-- Add: Time, author, lines edited -->
     </dl>

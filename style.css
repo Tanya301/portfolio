@@ -243,6 +243,7 @@ transform: scale(1.5);
 }
 
 #commit-tooltip {
+    position: absolute;
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     /* backdrop-filter: blur(8px) brightness(120%); */
@@ -253,9 +254,31 @@ dl.info {
     /* ... other styles ... */
     transition-duration: 500ms;
     transition-property: opacity, visibility;
+    color: #171717;
 }
 
 dl.info[hidden]:not(:hover, :focus-within) {
     opacity: 0;
     visibility: hidden;
+}
+
+@keyframes marching-ants {
+    to {
+        stroke-dashoffset: -8; /* 5 + 3 */
+    }
+}
+
+.selection {
+    fill-opacity: 0.1;
+    stroke: black;
+    stroke-opacity: 0.7;
+    stroke-dasharray: 5 3;
+    animation: marching-ants 2s linear infinite;
+}
+  
+circle {
+    fill: steelblue;
+}
+circle.selected {
+    fill: #ff6b6b;
 }
