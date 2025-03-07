@@ -1,5 +1,6 @@
 let data = [];
 let commits = [];
+let selectedCommits = [];
 
 async function loadData() {
     data = await d3.csv('loc.csv', (row) => ({
@@ -171,18 +172,22 @@ function createScatterplot() {
         .attr('transform', `translate(${usableArea.left}, 0)`)
         .call(yAxis);
 
-    dots
-        .selectAll('circle')
-        .on('mouseenter', (event, commit) => {
-            updateTooltipContent(commit);
-            updateTooltipVisibility(true);
-            updateTooltipPosition(event);
-        })
-        .on('mouseleave', () => {
-            updateTooltipContent({});
-            updateTooltipVisibility(false);
-        });
-
+        dots
+            .selectAll('circle')
+            .on('mouseenter', (event, commit) => {
+                updateTooltipContent(commit);
+                updateTooltipVisibility(true);
+                updateTooltipPosition(event);
+                
+                d3.select(event.currentTarget).classed('selected', true); // Highlight the hovered dot
+            })
+            .on('mouseleave', (event) => {
+                updateTooltipContent({});
+                updateTooltipVisibility(false);
+        
+                d3.select(event.currentTarget).classed('selected', false); // Remove highlight
+            });
+    
         brushSelector();
 }
 
@@ -226,24 +231,23 @@ function brushSelector() {
 let brushSelection = null;
 let xScale, yScale;
 
-function brushed(event) {
-    brushSelection = event.selection;
-    updateSelection();
-    updateSelectionCount();
-    updateLanguageBreakdown();
+function brushed(evt) {
+    let brushSelection = evt.selection;
+    selectedCommits = !brushSelection
+        ? []
+        : commits.filter((commit) => {
+            let min = { x: brushSelection[0][0], y: brushSelection[0][1] };
+            let max = { x: brushSelection[1][0], y: brushSelection[1][1] };
+            let x = xScale(commit.date);
+            let y = yScale(commit.hourFrac);
+    
+            return x >= min.x && x <= max.x && y >= min.y && y <= max.y;
+            });
 }
-
+  
 function isCommitSelected(commit) {
-    if (!brushSelection) return false;
-  
-    const min = { x: brushSelection[0][0], y: brushSelection[0][1] };
-    const max = { x: brushSelection[1][0], y: brushSelection[1][1] };
-  
-    const x = xScale(commit.date);
-    const y = yScale(commit.hourFrac);
-  
-    return x >= min.x && x <= max.x && y >= min.y && y <= max.y;
-  }
+    return selectedCommits.includes(commit);
+}
 
 function updateSelection() {
     // Update visual state of dots based on selection
