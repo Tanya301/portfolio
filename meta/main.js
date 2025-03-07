@@ -172,22 +172,18 @@ function createScatterplot() {
         .attr('transform', `translate(${usableArea.left}, 0)`)
         .call(yAxis);
 
-        dots
-            .selectAll('circle')
-            .on('mouseenter', (event, commit) => {
-                updateTooltipContent(commit);
-                updateTooltipVisibility(true);
-                updateTooltipPosition(event);
-                
-                d3.select(event.currentTarget).classed('selected', true); // Highlight the hovered dot
-            })
-            .on('mouseleave', (event) => {
-                updateTooltipContent({});
-                updateTooltipVisibility(false);
-        
-                d3.select(event.currentTarget).classed('selected', false); // Remove highlight
-            });
-    
+    dots
+        .selectAll('circle')
+        .on('mouseenter', (event, commit) => {
+            updateTooltipContent(commit);
+            updateTooltipVisibility(true);
+            updateTooltipPosition(event);
+        })
+        .on('mouseleave', () => {
+            updateTooltipContent({});
+            updateTooltipVisibility(false);
+        });
+
         brushSelector();
 }
 
@@ -232,19 +228,26 @@ let brushSelection = null;
 let xScale, yScale;
 
 function brushed(evt) {
-    let brushSelection = evt.selection;
+    // Don't shadow the global variable
+    brushSelection = evt.selection;
     selectedCommits = !brushSelection
         ? []
         : commits.filter((commit) => {
             let min = { x: brushSelection[0][0], y: brushSelection[0][1] };
             let max = { x: brushSelection[1][0], y: brushSelection[1][1] };
-            let x = xScale(commit.date);
+            // Use datetime instead of date to match the original code
+            let x = xScale(commit.datetime);
             let y = yScale(commit.hourFrac);
     
             return x >= min.x && x <= max.x && y >= min.y && y <= max.y;
             });
+    
+    // Call the update functions
+    updateSelection();
+    updateSelectionCount();
+    updateLanguageBreakdown();
 }
-  
+
 function isCommitSelected(commit) {
     return selectedCommits.includes(commit);
 }
